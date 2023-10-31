@@ -6,3 +6,4 @@ Plugins/UEGitPlugin-3.15/.gitignore
 Plugins/UEGitPlugin-3.15/
 Saved/
 .vsconfig
+Content/MolecularInteractionForces/BP_TestActor.uasset

@@ -32,3 +32,16 @@ void UForceControl::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	// ...
 }
 
+
+bool UForceControl::ChangePhysics()
+{
+	if (bSimulatePhysics == true)
+	{
+		bSimulatePhysics = false;
+	}
+	else
+	{
+		bSimulatePhysics = true;
+	}
+	return bSimulatePhysics;
+}
