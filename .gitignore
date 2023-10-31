@@ -1,0 +1,8 @@
+*.vsidx
+.vs/
+Binaries/
+Intermediate/
+Plugins/UEGitPlugin-3.15/.gitignore
+Plugins/UEGitPlugin-3.15/
+Saved/
+.vsconfig
