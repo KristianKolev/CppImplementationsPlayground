@@ -26,7 +26,12 @@ public:
 
 public:
 	UPROPERTY(BlueprintReadWrite)
-		bool bSimulatePhysics = true;
+	bool bSimulatePhysics = true;
 	UFUNCTION(BlueprintCallable)
 	bool ChangePhysics();
+
+	double BrownianMotion();
+	double LeonarJonesPotential();
+	double DipoleDipoleInteraction();
+
 };

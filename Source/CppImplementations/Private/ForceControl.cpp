@@ -45,3 +45,12 @@ bool UForceControl::ChangePhysics()
 	}
 	return bSimulatePhysics;
 }
+
+double UForceControl::DipoleDipoleInteraction(double SelfOriginOfForce, double TargetOriginOfForce, double DDInfluenceDistance, double AffinityContribution, double ForceModifier);
+{
+	double DistanceToTarget = VectorLength(SelfOriginOfForce - TargetOriginOfForce);
+	double NormalizedDistanceVector = Normalize(SelfOriginOfForce - TargetOriginOfForce);
+	double ForceDistanceComponent = pow((DDInfluenceDistance - clamp(DistanceToTarget, 0.0, DDInfluenceDistance)) / DDInfluenceDistance, 2);
+	double Force = ForceDistanceComponent * (ForceModifier * 10000) * NormalizedDistanceVector * AffinityContribution;
+	return Force;
+}
